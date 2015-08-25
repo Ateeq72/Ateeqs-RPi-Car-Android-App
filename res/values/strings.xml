@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    
+<resources>    
     <string name="app_name">Ateeqs RPi Car</string>
-    
     <string name="localPort">Local Port</string>
     <string name="ip_address">IP Address</string>
     <string name="port">RPi Port</string>
     <string name="send">Set</string>
     <string name="payload">Message</string>
-      <string name="front_lab">Forward</string>
+    <string name="front_lab">Forward</string>
     <string name="front_right_lab">Forward + Right</string>
     <string name="right_lab">Right</string>
     <string name="right_bottom_lab">Reverse + Right</string>
@@ -17,4 +15,6 @@
     <string name="left_lab">Left</string>
     <string name="left_front_lab">Forward + Left</string>
     <string name="center_lab">Stop</string>
+    <string name="portvalue">5005</string>
+    <string name="defaultip">192.168.1.6</string>
 </resources>

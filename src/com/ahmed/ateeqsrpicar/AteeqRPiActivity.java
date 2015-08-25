@@ -1,4 +1,4 @@
-//Coded by ateeq72@xda
+//Coded by ateeq72@xd.0a")
 //Thanks to jrbenito for UDP stuff @ https://github.com/jrbenito/Android-UDP-Terminal
 //Thanks to zerokol for JoyStickView!
 //anyone can use the code but please provide proper credits! Thanks :)
@@ -24,14 +24,12 @@ public class AteeqRPiActivity extends Activity {
 	//porting as others views
 	private JoystickView joystick;
 	
+	
 	private int sendPacket(int lPorta,String ipHost, int port, String payload) throws IOException {
-		
+					
 		InetAddress address = InetAddress.getByName(ipHost);
-				
 		DatagramSocket socket = new DatagramSocket(lPorta);
-		
 		DatagramPacket packet = new DatagramPacket(payload.getBytes(),payload.length(),address,port);
-		
 		socket.send(packet);
 		socket.disconnect();
 		socket.close();
@@ -48,8 +46,7 @@ public class AteeqRPiActivity extends Activity {
         final EditText edLporta = (EditText) findViewById(R.id.editTextLocalPort);
         final EditText edIP = (EditText) findViewById(R.id.editTextIp);
         final EditText edPorta = (EditText) findViewById(R.id.editTextPorta);
-        
-        
+           
       
         angleTextView = (TextView) findViewById(R.id.angleTextView);
         powerTextView = (TextView) findViewById(R.id.powerTextView);
@@ -66,18 +63,21 @@ public class AteeqRPiActivity extends Activity {
         switch (direction) {
         	case JoystickView.FRONT:
         		 	directionTextView.setText(R.string.front_lab);
-        		 	//udpdata("0;1");
+        		 	        		 	
         		 	try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
-        		 		 sendPacket(lport,edIP.getText().toString(), port, "0;1");
+        		 		sendPacket(lport,edIP.getText().toString(), port, "0;1");
+        		 		       		 		
         			} catch (IOException e) {
         				// TODO Auto-generated catch block
         				e.printStackTrace();
+        				break;
         			}
-        			break;
+        			
         	case JoystickView.FRONT_RIGHT:
         			directionTextView.setText(R.string.left_front_lab);
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -89,7 +89,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.RIGHT:
         			directionTextView.setText(R.string.left_lab);
-        			//udpdata("0;15");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -101,7 +101,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.RIGHT_BOTTOM:
         			directionTextView.setText(R.string.bottom_left_lab);
-        			//udpdata("2;-15");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -113,7 +113,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.BOTTOM:
         			directionTextView.setText(R.string.bottom_lab);
-        			//udpdata("2;0");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -125,7 +125,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.BOTTOM_LEFT:
         			directionTextView.setText(R.string.right_bottom_lab);
-        			//udpdata("2;15");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -137,7 +137,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.LEFT:
         			directionTextView.setText(R.string.right_lab);
-        			//udpdata("0;15");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -149,7 +149,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	case JoystickView.LEFT_FRONT:
         			directionTextView.setText(R.string.front_right_lab);
-        			//udpdata("1;-15");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -161,7 +161,7 @@ public class AteeqRPiActivity extends Activity {
         			break;
         	default:
         			directionTextView.setText(R.string.center_lab);
-        			//udpdata("0;0");
+        			
         			try {
         		 		int port = Integer.parseInt(edPorta.getText().toString());
         		 		int lport = Integer.parseInt(edLporta.getText().toString());
@@ -176,3 +176,4 @@ public class AteeqRPiActivity extends Activity {
         }        
     
     }
+

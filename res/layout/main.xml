@@ -30,16 +30,25 @@
     <EditText android:layout_height="wrap_content" 
         android:id="@+id/editTextIp" 
         android:inputType="text" 
-        android:layout_width="200dp">
+        android:layout_width="200dp"
+        android:text="@string/defaultip">
         <requestFocus></requestFocus>
     </EditText>
     </TableRow>
 		<TableRow >
-    <TextView android:id="@+id/textViewLocalPort" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/localPort"></TextView>
+    <TextView android:id="@+id/textViewLocalPort" 
+        android:layout_height="wrap_content" 
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:layout_width="wrap_content" 
+        android:text="@string/localPort">
+            </TextView>
     <EditText android:layout_height="wrap_content" 
         android:inputType="number"
         android:id="@+id/editTextLocalPort" 
-        android:layout_width="60dp"></EditText></TableRow>
+        android:layout_width="60dp"
+        android:text="@string/portvalue">
+         </EditText>
+		</TableRow>
     
     <TableRow>
     <TextView android:id="@+id/textViewPorta" 
@@ -50,14 +59,9 @@
     <EditText android:layout_height="wrap_content" 
         android:id="@+id/editTextPorta" 
         android:inputType="number" 
-        android:layout_width="60dp" >
+        android:layout_width="60dp"
+        android:text="@string/portvalue">
        </EditText>
     </TableRow>
-    <!-- <TableRow >   
-    <TextView android:id="@+id/textViewPayload" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/payload"></TextView>
-    <EditText android:layout_height="wrap_content" android:id="@+id/editTextPayload" android:layout_width="200dp"></EditText>
-    </TableRow>
-        <Button android:layout_height="wrap_content" android:layout_gravity="right" android:text="@string/send" android:id="@+id/buttonSend" android:layout_weight="0.04" android:layout_width="100dp"></Button>
-    -->
     </TableLayout>
 </LinearLayout>
